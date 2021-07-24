@@ -9,10 +9,18 @@ class Folder extends Model
 {
     use HasFactory;
 
-    protected $fillable = ['title', 'is_exapanded'];
+    protected $fillable = [
+        'title',
+        'is_exapanded'
+    ];
 
     public function user()
     {
         return $this->belongsTo(User::class);
+    }
+
+    public function feeds()
+    {
+        return $this->hasMany(Feed::class);
     }
 }

@@ -1,5 +1,6 @@
-const mix = require('laravel-mix');
+"use strict";
 
+var mix = require('laravel-mix');
 /*
  |--------------------------------------------------------------------------
  | Mix Asset Management
@@ -11,9 +12,6 @@ const mix = require('laravel-mix');
  |
  */
 
- mix.browserSync('http://192.168.0.120:8000/');
 
-
-mix.js('resources/js/app.js', 'public/js')
-    .vue()
-    .sass('resources/sass/app.scss', 'public/css');
+mix.browserSync('http://192.168.0.120:8000/');
+mix.js('resources/js/app.js', 'public/js').vue().sass('resources/sass/app.scss', 'public/css');
